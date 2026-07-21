@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment - Keyframe Animations</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            gap: 30px;
+        }
+
+        h2 {
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        /* ----------------------------------------------------
+           KEYFRAME ANIMATION DEFINITION
+           ---------------------------------------------------- */
+        @keyframes pulseGlowRing {
+            0% {
+                transform: scale(0.95) rotate(0deg);
+                box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.7);
+                border-radius: 20px;
+            }
+            50% {
+                transform: scale(1.1) rotate(180deg);
+                box-shadow: 0 0 0 25px rgba(168, 85, 247, 0);
+                border-radius: 50%;
+                background-color: #ec4899;
+            }
+            100% {
+                transform: scale(0.95) rotate(360deg);
+                box-shadow: 0 0 0 0 rgba(168, 85, 247, 0);
+                border-radius: 20px;
+            }
+        }
+
+        /* APPLIED ANIMATION CLASS */
+        .animated-badge {
+            width: 140px;
+            height: 140px;
+            background-color: #8b5cf6;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            
+            /* ANIMATION SHORTNAMES: name | duration | timing-function | iteration-count */
+            animation: pulseGlowRing 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Complex Multi-Stage Keyframe Animation</h2>
+
+    <div class="animated-badge">
+        ANIMATING
+    </div>
+
+</body>
+</html>

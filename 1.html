@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment - Transition & Transform</title>
+    <style>
+        /* CSS Reset & Base Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            gap: 20px;
+        }
+
+        .heading {
+            font-size: 1.5rem;
+            color: #94a3b8;
+            letter-spacing: 0.5px;
+        }
+
+        /* ----------------------------------------------------
+           TRANSITION & TRANSFORM CARD DEMO
+           ---------------------------------------------------- */
+        .card {
+            width: 320px;
+            padding: 32px 24px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            text-align: center;
+            cursor: pointer;
+
+            /* TRANSITION: Defines property, duration, timing function, and delay */
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                        box-shadow 0.4s ease,
+                        border-color 0.4s ease,
+                        background-color 0.4s ease;
+        }
+
+        .card-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            display: inline-block;
+            
+            /* Sub-element transition */
+            transition: transform 0.4s ease;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            color: #38bdf8;
+            margin-bottom: 8px;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        /* TRANSFORMATIONS ON HOVER STATE */
+        .card:hover {
+            /* COMBINED TRANSFORMATIONS: Translate (Move up), Scale (Enlarge), Rotate */
+            transform: translateY(-12px) scale(1.03) rotate(-1deg);
+            background-color: #1e293b;
+            border-color: #38bdf8;
+            box-shadow: 0 20px 25px -5px rgba(56, 189, 248, 0.25), 
+                        0 8px 10px -6px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Nested transformation trigger */
+        .card:hover .card-icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+    </style>
+</head>
+<body>
+
+    <p class="heading">Hover over the card to observe combined Transition & Transform effects</p>
+
+    <div class="card">
+        <div class="card-icon">🚀</div>
+        <h3 class="card-title">Interactive Component</h3>
+        <p class="card-desc">Translates upward, scales up smoothly, and rotates on mouse hover using hardware-accelerated CSS properties.</p>
+    </div>
+
+</body>
+</html>
