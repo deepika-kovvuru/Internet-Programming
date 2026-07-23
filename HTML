@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development Standards Implementation</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Header */
+header{
+    background:linear-gradient(135deg,#0077ff,#00c6ff);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-size:42px;
+}
+
+header p{
+    margin-top:15px;
+    font-size:18px;
+}
+
+/* Navigation */
+
+nav{
+    background:#0a2342;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+}
+
+nav li{
+    margin:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#00c6ff;
+}
+
+/* Sections */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    background:white;
+    margin:35px 0;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0px 4px 15px rgba(0,0,0,.1);
+}
+
+h2{
+    color:#0077ff;
+    margin-bottom:20px;
+}
+
+/* Cards */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#eef6ff;
+    padding:20px;
+    border-radius:10px;
+    border-left:6px solid #0077ff;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* Table */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#0077ff;
+    color:white;
+}
+
+table th,
+table td{
+    padding:12px;
+    border:1px solid #ddd;
+}
+
+/* Video */
+
+.video{
+    text-align:center;
+}
+
+video{
+    width:90%;
+    max-width:700px;
+    border-radius:10px;
+}
+
+/* Answers */
+
+.answer{
+    background:#e9fff0;
+    padding:18px;
+    border-left:6px solid green;
+    margin:15px 0;
+}
+
+/* Footer */
+
+footer{
+    background:#0a2342;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h1>🌐 Web Development Standards Implementation</h1>
+
+<p>Scenario Based Learning using HTML5, HTTP, XML and Web Communication Protocols</p>
+
+</header>
+
+<nav>
+
+<ul>
+
+<li><a href="#scenario">Scenario</a></li>
+
+<li><a href="#video">Video</a></li>
+
+<li><a href="#snippets">Data</a></li>
+
+<li><a href="#questions">Questions</a></li>
+
+<li><a href="#answers">Answers</a></li>
+
+</ul>
+
+</nav>
+
+<div class="container">
+
+<section id="scenario">
+
+<h2>📖 Scenario</h2>
+
+<p>
+A startup company is developing a modern web application.
+During development, the developers encounter problems related to
+HTML elements, HTTP methods, XML syntax, and web communication protocols.
+They must select the correct web standards to build a secure,
+responsive, and standards-compliant website.
+</p>
+
+<br>
+
+<div class="grid">
+
+<div class="card">
+<h3>🎥 Homepage</h3>
+Embed a promotional video.
+</div>
+
+<div class="card">
+<h3>📝 Registration</h3>
+Securely send user data to the server.
+</div>
+
+<div class="card">
+<h3>🧭 Navigation</h3>
+Use semantic HTML elements.
+</div>
+
+<div class="card">
+<h3>📄 XML</h3>
+Fix configuration syntax errors.
+</div>
+
+<div class="card">
+<h3>🌐 Protocol</h3>
+Use the correct communication protocol.
+</div>
+
+</div>
+
+</section>
+
+<section id="video">
+
+<h2>🎥 Promotional Video</h2>
+
+<div class="video">
+
+<video controls>
+<source src="video.mp4" type="video/mp4">
+Your browser does not support HTML5 Video.
+</video>
+
+<p><br>This demonstrates the correct HTML5
+<strong>&lt;video&gt;</strong> element.</p>
+
+</div>
+
+</section>
+
+<section id="snippets">
+
+<h2>📋 Data Snippets</h2>
+
+<table>
+
+<tr>
+
+<th>Category</th>
+
+<th>Options</th>
+
+</tr>
+
+<tr>
+
+<td>Video Tag</td>
+
+<td>
+
+A. &lt;media&gt;<br>
+
+<b>B. &lt;video src="video.mp4" controls&gt;&lt;/video&gt;</b><br>
+
+C. &lt;movie&gt;<br>
+
+D. &lt;vid&gt;
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>HTTP Method</td>
+
+<td>
+
+GET | <b>POST</b> | PUT | DELETE
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Navigation</td>
+
+<td>
+
+&lt;div&gt; |
+<b>&lt;nav&gt;</b> |
+&lt;section&gt; |
+&lt;header&gt;
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>XML</td>
+
+<td>
+
+<b>&lt;note&gt;&lt;to&gt;User&lt;/to&gt;&lt;from&gt;Admin&lt;/from&gt;&lt;/note&gt;</b>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Protocol</td>
+
+<td>
+
+FTP |
+<b>HTTP</b> |
+SMTP |
+SNMP
+
+</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section id="questions">
+
+<h2>❓ Questions</h2>
+
+<ol>
+
+<li>Select the correct HTML tag for video embedding and justify your answer.</li>
+
+<li>Identify the appropriate HTTP method for form submission and explain why.</li>
+
+<li>Choose the proper semantic HTML element for navigation.</li>
+
+<li>Identify the correct XML syntax and explain errors in the remaining options.</li>
+
+<li>Select the correct web communication protocol and justify your answer.</li>
+
+</ol>
+
+</section>
+
+<section id="answers">
+
+<h2>✅ Solutions</h2>
+
+<div class="answer">
+
+<h3>1. Video Embedding</h3>
+
+<p><b>Answer:</b> &lt;video&gt;</p>
+
+<p>The HTML5 <b>&lt;video&gt;</b> tag is specifically designed for embedding videos. The controls attribute provides Play, Pause, Volume, and Fullscreen buttons.</p>
+
+</div>
+
+<div class="answer">
+
+<h3>2. HTTP Method</h3>
+
+<p><b>Answer:</b> POST</p>
+
+<p>POST sends user information inside the request body, making it more secure than GET for registration forms.</p>
+
+</div>
+
+<div class="answer">
+
+<h3>3. Semantic Navigation</h3>
+
+<p><b>Answer:</b> &lt;nav&gt;</p>
+
+<p>The navigation element clearly defines menus and improves accessibility and SEO.</p>
+
+</div>
+
+<div class="answer">
+
+<h3>4. XML Syntax</h3>
+
+<p><b>Answer:</b></p>
+
+<code>
+&lt;note&gt;
+&lt;to&gt;User&lt;/to&gt;
+&lt;from&gt;Admin&lt;/from&gt;
+&lt;/note&gt;
+</code>
+
+<p><br>Other options contain missing closing tags, mismatched tags, or incomplete syntax.</p>
+
+</div>
+
+<div class="answer">
+
+<h3>5. Communication Protocol</h3>
+
+<p><b>Answer:</b> HTTP</p>
+
+<p>HTTP (HyperText Transfer Protocol) is the standard protocol used by browsers and web servers to exchange web pages and application data.</p>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+
+<h3>Internet Programming Project</h3>
+
+<p>Designed using HTML5 & CSS3 | Web Development Standards Implementation</p>
+
+</footer>
+
+</body>
+</html>
