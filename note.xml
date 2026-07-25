@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<note>
+
+    <to>User</to>
+
+    <from>Admin</from>
+
+    <subject>Registration</subject>
+
+    <message>
+        Welcome to the Web Development Standards Implementation Project.
+    </message>
+
+</note>
